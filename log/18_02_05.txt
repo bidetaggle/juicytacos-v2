@@ -1,0 +1,14 @@
+
+[08:30:15] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in on clause is ambiguous on file /srv/http/juicytacos/libraries/sql.lib.php on line 250.
+
+[08:33:50] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in on clause is ambiguous on file /srv/http/juicytacos/libraries/sql.lib.php on line 250.
+
+[08:36:28] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous on file /srv/http/juicytacos/libraries/sql.lib.php on line 252.
+
+[08:36:44] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous on file /srv/http/juicytacos/libraries/sql.lib.php on line 252.
+
+[09:35:57] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON  =  WHERE owner = 69' at line 3 on file /srv/http/juicytacos/libraries/sql.lib.php on line 255.
+
+[09:36:23] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'bills.id_user' in 'on clause' on file /srv/http/juicytacos/libraries/sql.lib.php on line 257.
+
+[09:36:49] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.id_user' in 'on clause' on file /srv/http/juicytacos/libraries/sql.lib.php on line 257.

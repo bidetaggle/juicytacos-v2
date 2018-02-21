@@ -1,0 +1,4 @@
+
+[19:11:02] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user' in 'where clause' on file /srv/http/juicytacos/libraries/sql.lib.php on line 235.
+
+[19:12:08] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user' in 'where clause' on file /srv/http/juicytacos/libraries/sql.lib.php on line 235.

@@ -1,0 +1,2 @@
+
+[02:43:20] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juicytacos.menu' doesn't exist on file /srv/http/juicytacos/sql/abstract.sql.php on line 70.
