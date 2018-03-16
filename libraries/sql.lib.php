@@ -112,7 +112,8 @@ class SQL
 
 			if(!empty($this->join)){
 				foreach ($this->join as $key => $value) {
-					$w0 .= "JOIN ".$value['table']." ON ".$value['column1']." = ".$value['column2']." ";
+					$w0 .= "JOIN ".Configuration::$databaseTablePrefix.$value['table']." 
+							ON ".Configuration::$databaseTablePrefix.$this->tableName.".".$value['column1']." = ".Configuration::$databaseTablePrefix.$value['table'].".".$value['column2']." ";
 				}
 			}
 
@@ -219,7 +220,8 @@ class SQL
 
 		if(!empty($this->join)){
 			foreach ($this->join as $key => $value) {
-				$w0 .= "JOIN ".$value['table']." ON ".$value['column1']." = ".$value['column2']." ";
+				$w0 .= "JOIN ".Configuration::$databaseTablePrefix.$value['table']." 
+						ON ".Configuration::$databaseTablePrefix.$this->tableName.".".$value['column1']." = ".Configuration::$databaseTablePrefix.$value['table'].".".$value['column2']." ";
 			}
 		}
 
