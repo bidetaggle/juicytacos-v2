@@ -15,6 +15,7 @@ class SQL
     private $where = array();
     private $whereNot = array();
     private $join = array();
+    private $orderby = array();
 
     /**
 	 * Table name on where you will work
@@ -67,6 +68,11 @@ class SQL
 		array_push($this->join, $join);
 	}
 
+	public function orderby($column, $order){
+		$this->orderby['column'] = $column;
+		$this->orderby['order'] = $order;
+	}
+
 	/**
 	 * Debug function whose purpose is to prompt the final SQL request
 	 * @param string $type = "insert" ; "insert" || "i" || "update" || "u"
@@ -106,7 +112,7 @@ class SQL
 						'.$this->makeWhereString($this->where);
 		}
 
-		elseif($type == "select" || $type == "s"){
+		else{
 			$w0 = "";
 			$w = "";
 
@@ -142,6 +148,9 @@ class SQL
 					else
 						$w .= $key . " NOT LIKE '$value'";
 				}
+			}
+			if(!empty($this->orderby)){
+				$w .= "ORDER BY ".$this->orderby['column']." ".$this->orderby['order'];
 			}
 
 			$request = 'SELECT * 
@@ -250,6 +259,9 @@ class SQL
 				else
 					$w .= $key . " NOT LIKE '$value'";
 			}
+		}
+		if(!empty($this->orderby)){
+			$w .= "ORDER BY ".$this->orderby['column']." ".$this->orderby['order'];
 		}
 
 		$bdd = Database::$dbh->prepare('SELECT * 
