@@ -10,7 +10,7 @@ abstract class Secure
 {
     public static function allowedUser($status){
         $req = Database::$dbh->prepare('SELECT * FROM users WHERE id = ?');
-        $req->execute(array(self::forceInt($_SESSION['id']));
+        $req->execute(array(self::forceInt($_SESSION['id'])));
         $response = $req->fetch();
 
         return ($response && $response['status'] == $status);

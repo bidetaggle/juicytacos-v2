@@ -2,10 +2,10 @@
 $params = '
 {
     "debug":                false,
-    "httpsEnabled":         true,
+    "httpsEnabled":         false,
 
-	"rootURL":              "localhost/juicytacos",
-	"rootPath":             "/srv/http/juicytacos",
+	"rootURL":              "localhost/juicytacos-v2",
+	"rootPath":             "/srv/http/juicytacos-v2",
 
     "databaseHost":         "localhost",
     "databasePort":         3306,
